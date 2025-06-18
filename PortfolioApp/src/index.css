@@ -47,7 +47,7 @@
   }
   @keyframes meteor {
     0% {
-      transform: roatate(215deg) translateX(0);
+      transform: rotate(215deg) translateX(0);
       opacity: 1;
     }
     70%{
