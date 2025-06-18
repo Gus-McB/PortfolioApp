@@ -11,8 +11,6 @@ export const StarBackground = () => {
         };
 
         window.addEventListener('resize', handleResize);
-        generateStars();
-
         return () => {
             window.removeEventListener('resize', handleResize);
         };
@@ -70,7 +68,7 @@ export const StarBackground = () => {
         ))}
         {meteors.map((meteor) => (
             <div key={meteor.id} className='meteor animate-meteor' style={{
-                width: `${meteor.size}px`,
+                width: `${meteor.size * 30}px`,
                 height: `${meteor.size}px`,
                 left: `${meteor.x}%`,
                 top: `${meteor.y}%`,
