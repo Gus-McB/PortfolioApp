@@ -92,7 +92,7 @@ export const ContactSection = () => {
                             <input type="text" 
                             id="name" 
                             required 
-                            className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary" 
+                            className="w-full px-4 py-3 rounded-md border border-input bg-white focus:outline-hidden foucs:ring-2 focus:ring-primary" 
                             placeholder="Angus McBride..." />
                         </div>
                         <div>
@@ -100,16 +100,16 @@ export const ContactSection = () => {
                             <input type="email" 
                             id="email" 
                             required 
-                            className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary" 
+                            className="w-full px-4 py-3 rounded-md border border-input bg-white focus:outline-hidden foucs:ring-2 focus:ring-primary" 
                             placeholder="jon@gmail.com" />
                         </div>
                         <div>
-                            <label htmlFor="message" className="block text-sm font-medium mb-2" > Your Name</label>
+                            <label htmlFor="message" className="block text-sm font-medium mb-2" > Your Message</label>
                             <textarea
                             name="message"
                             id="message" 
                             required 
-                            className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary resize-none" 
+                            className="w-full px-4 py-3 rounded-md border border-input bg-white focus:outline-none focus:ring-2 focus:ring-primary resize-none" 
                             placeholder="Write message here" />
                         </div>
                         <button disabled={isSubmitting} type="submit" className={cn("cosmic-button w-full flex items-center justify-center gap-2")}>
