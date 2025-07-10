@@ -7,7 +7,6 @@
 
   --color-primary: hsl(var(--primary));
   --color-primary-foreground: hsl(var(--primary-foreground));
-
   --color-card: hsl(var(--card));
   
   --animate-float: float 6s ease-in-out infinite;
@@ -97,10 +96,6 @@
     --border: 217 33% 20%;
   }
 
-  * {
-    @apply border-border;
-  }
-
   html {
     @apply scroll-smooth;
   }
@@ -111,69 +106,70 @@
   }
 }
 
-@utility container {
-  margin-inline: auto;
-  padding-inline: 2rem;
-
+@layer utilities {
+  .container {
+    margin-inline: auto;
+    padding-inline: 2rem;
+  }
   @media (width >= 640px) {
-    max-width: 640px;
+    .container { max-width: 640px; }
   }
   @media (width >= 768px) {
-    max-width: 768px;
+    .container { max-width: 768px; }
   }
   @media (width >= 1024px) {
-    max-width: 1024px;
+    .container { max-width: 1024px; }
   }
   @media (width >= 1280px) {
-    max-width: 1280px;
+    .container { max-width: 1280px; }
   }
   @media (width >= 1400px) {
-    max-width: 1400px;
+    .container { max-width: 1400px; }
   }
-}
 
-@utility text-glow {
-  @apply relative;
-  text-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
-}
+  .text-glow {
+    @apply relative;
+    text-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
+  }
 
-@utility card-hover {
-  @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
-}
+  .card-hover {
+    @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
+  }
 
-@utility gradient-border {
-  @apply relative rounded-md;
-  background: linear-gradient(to right, hsl(var(--card)), hsl(var(--card)));
-  background-clip: padding-box;
-  border: 1px solid transparent;
-}
+  .gradient-border {
+    @apply relative rounded-md;
+    background: linear-gradient(to right, hsl(var(--card)), hsl(var(--card)));
+    background-clip: padding-box;
+    border: 1px solid transparent;
+  }
 
-@utility cosmic-button {
-  @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium
-        transition-all duration-300 hover:shadow-[0_0_10px_rgba(139,92,246,0.5)]
-        hover:scale-105 active:scale-95;
-}
+  .cosmic-button {
+    @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium
+      transition-all duration-300 hover:shadow-[0_0_10px_rgba(139,92,246,0.5)]
+      hover:scale-105 active:scale-95;
+  }
 
-@utility star {
-  @apply absolute rounded-full bg-white;
-  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4)
-}
+  .star {
+    @apply absolute rounded-full bg-white;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4)
+  }
 
-@utility meteor {
-  @apply absolute bg-linear-to-r from-white via-white to-transparent rounded-full;
-  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4)
-}
+  .meteor {
+    @apply absolute bg-gradient-to-r from-white via-white to-transparent rounded-full;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4)
+  }
 
-@utility animate-fly {
-  animation: fly 6s linear infinite;
-}
+  .animate-fly {
+    animation: fly 6s linear infinite;
+  }
 
-@utility animate-fly-reverse {
-  animation: fly-reverse 6s linear infinite;
-}
+  .animate-fly-reverse {
+    animation: fly-reverse 6s linear infinite;
+  }
 
-@utility plane {
-  @apply absolute;
+  .plane {
+    @apply absolute;
+  }
 }
 
 #root {

@@ -1,7 +1,8 @@
- import { Mail, Phone, MapPin, Linkedin, Instagram, Facebook, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Instagram, Facebook, Send } from "lucide-react";
  import { cn } from "../lib/utils";
  import { useToast } from "../hooks/use-toast";
  import { useState } from "react";
+ import emailjs from '@emailjs/browser';
 
 export const ContactSection = () => {
     const {toast} = useToast();
@@ -10,14 +11,15 @@ export const ContactSection = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setIsSubmitting(true);
-        setTimeout(() => {
-            toast({
-                title: "Message Sent",
-                description: "Thank you for reaching out! I will get back to you soon.",
-            });
+        emailjs.sendForm('service_7qbajy4', 'template_121f1ze', e.target, 'mniFEdmmcAUUVTMRG')
+          .then(() => {
+            toast({ title: "Message Sent", description: "Thank you for reaching out!" });
             setIsSubmitting(false);
-        }, 1500);
-    }
+          }, () => {
+            toast({ title: "Error", description: "Failed to send message." });
+            setIsSubmitting(false);
+          });
+      };
 
     return <section id="contact" className="py-24 px-4 relative bg-secondary/30">
         <div className="container mx-auto max-w-5xl">
@@ -86,11 +88,12 @@ export const ContactSection = () => {
                 <div className="bg-card p-8 rounded-lg shadow-xs"
                 onSubmit={handleSubmit}>
                     <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
-                    <form className="space-y-6"> {/* implement email api */}
+                    <form className="space-y-6">
                         <div>
                             <label htmlFor="name" className="block text-sm font-medium mb-2" > Your Name</label>
                             <input type="text" 
                             id="name" 
+                            name="name"
                             required 
                             className="text-black w-full px-4 py-3 rounded-md border border-input bg-primary-foreground focus:outline-hidden foucs:ring-2 focus:ring-primary" 
                             placeholder="Angus McBride..." />
@@ -99,6 +102,7 @@ export const ContactSection = () => {
                             <label htmlFor="email" className="block text-sm font-medium mb-2" > Your Email</label>
                             <input type="email" 
                             id="email" 
+                            name="email"
                             required 
                             className="text-black w-full px-4 py-3 rounded-md border border-input bg-primary-foreground focus:outline-hidden foucs:ring-2 focus:ring-primary" 
                             placeholder="jon@gmail.com" />
