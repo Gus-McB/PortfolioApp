@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import plane from "../assets/plane.png";
+import { Cloud } from "../components/Cloud";
+import cloudImg from "../assets/cloud.png";
+import cloudImg2 from "../assets/cloud2.png";
 
 const PLANE_IMG = plane;
 
@@ -55,6 +58,9 @@ export const PlaneBackground = () => {
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+      <Cloud cloudImg={cloudImg} top="10%" left="10%" width={300} opacity={0.9} />
+      <Cloud cloudImg={cloudImg2} top="60%" left="40%" width={200} opacity={0.9} />
+      <Cloud cloudImg={cloudImg} top="70%" left="60%" width={300} opacity={0.9}  />
       {planes.map((plane) => {
         const isLeftToRight = plane.direction === "left-to-right";
         return (
