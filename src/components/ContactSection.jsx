@@ -28,7 +28,7 @@ export const ContactSection = () => {
             </h2>
 
             <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-                Filler for contact
+                Whether you have a question, want to collaborate, or just want to say hi, feel free to reach out! I'm always open to new opportunities and connections.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div className="space-y-8">
@@ -73,13 +73,13 @@ export const ContactSection = () => {
                     <div className="pt-8">
                         <h4 className="font-medium mb-4" > Connect With Me</h4>
                         <div className="flex space-x-4 justify-center">
-                            <a href="#" target="_blank">
+                            <a href="https://www.linkedin.com/in/angus-mcbride-091320290" target="_blank">
                                 <Linkedin />
                             </a>
-                            <a href="#" target="_blank">
+                            <a href="https://www.instagram.com/gus_mcbride47/" target="_blank">
                                 <Instagram />
                             </a>
-                            <a href="#" target="_blank">
+                            <a href="https://www.facebook.com/angus.mcbride.210304/" target="_blank">
                                 <Facebook />
                             </a>
                         </div>

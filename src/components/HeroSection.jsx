@@ -20,8 +20,8 @@ export const HeroSection = () => {
                         McBride
                         </span>
                 </h1>
-                <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-                    Write something here.
+                <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3 px-40">
+                    fill.
                 </p>
                 <div>
                     <a href="#projects" className="cosmic-button">
