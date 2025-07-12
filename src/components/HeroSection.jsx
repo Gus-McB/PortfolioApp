@@ -20,9 +20,9 @@ export const HeroSection = () => {
                         McBride
                         </span>
                 </h1>
-                <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3 px-40">
+                <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
                     I am a passionate Software Engineering student at the University of South Australia,
-                    specialising in Full Stack Development. I am focusing my independant studies in finance,
+                    specialising in Full Stack Development. I am focusing my independant studies in financial software,
                     specifically, trading algorithms and applying machine learning techniques to improve algorithmic
                     decision making.
                 </p>

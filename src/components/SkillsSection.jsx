@@ -4,14 +4,26 @@ import { cn } from "../lib/utils";
 const skills = [
     // frontend skills
     {name: "HTML/CSS", level: 95, category: "Frontend"},
-
+    {name: "React", level: 95, category: "Frontend"},
+    {name: "TailwindCSS", level: 95, category: "Frontend"},
+    {name: "Bootstrap", level: 85, category: "Tools"},
     // backend skills
-    {name: "Java", level: 90, category: "Backend"},
+    {name: "Java", level: 70, category: "Backend"},
+    {name: "C++", level: 80, category: "Backend"},
+    {name: "Python", level: 90, category: "Backend"},
+    {name: "TensorFlow", level: 60, category: "Backend"},
+    {name: "Scikit-learn", level: 70, category: "Backend"},
     // tools
-    {name: "Git", level: 85, category: "Tools"},
+    {name: "Git", level: 95, category: "Tools"},
+    {name: "Weka", level: 80, category: "Tools"},
+    {name: "GitHub", level: 90, category: "Tools"},
+    {name: "Vite", level: 80, category: "Tools"},
+    // Development Tools
+    {name: "Agile", level: 75, category: "Development"},
+    {name: "Scrum", level: 85, category: "Development"},
 ];
 
-const categories = ["all", "Frontend", "Backend", "Tools"];
+const categories = ["all", "Frontend", "Backend", "Tools", "Development"];
 
 export const SkillsSection = () => {
     const [activeCategory, setActiveCategory] = useState("all");

@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Linkedin, Instagram, Facebook, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Instagram, Facebook, Send, Space } from "lucide-react";
  import { cn } from "../lib/utils";
  import { useToast } from "../hooks/use-toast";
  import { useState } from "react";
@@ -64,8 +64,12 @@ export const ContactSection = () => {
                             </div>
                             <div>
                                 <h4 className="font-medium">Location</h4>
-                                <a className="text-muted-foreground hover:text-primary transition-colors">
+                                <a href="#" target="_blank" className="text-muted-foreground hover:text-primary transition-colors">
                                     Adelaide, South Australia
+                                </a> 
+                                /
+                                <a href="#" target="_blank" className="text-muted-foreground hover:text-primary transition-colors">
+                                    Hong Kong, Hong Kong 
                                 </a>
                             </div>
                         </div>
