@@ -34,7 +34,6 @@ export const PlaneBackground = () => {
       window.removeEventListener("resize", handleResize);
       observer.disconnect();
     };
-    // eslint-disable-next-line
   }, []);
 
   const generatePlanes = () => {

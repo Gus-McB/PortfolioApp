@@ -100,7 +100,7 @@ export const ContactSection = () => {
                             name="name"
                             required 
                             className="text-black w-full px-4 py-3 rounded-md border border-input bg-primary-foreground focus:outline-hidden foucs:ring-2 focus:ring-primary" 
-                            placeholder="Angus McBride..." />
+                            placeholder="Jonathan..." />
                         </div>
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium mb-2" > Your Email</label>

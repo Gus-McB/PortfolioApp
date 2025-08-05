@@ -14,12 +14,15 @@ export const AboutSection = () => {
                         <h3 className="text-2xl font-semibold">Passionate Software Engineering Student</h3>
 
                         <p className="text-muted-foreground">
-                            Something
+                            I am currently in my penultimate year of a Bachelor of Software Engineering (Honours) at the University of South Australia.
+                            As of now I am exploring the financial world of software, focusing my independant studies on algorithmic trading and developing 
+                            machine learning models trained using historical financial data.
                         </p>
 
                         <p className="text-muted-foreground">
-                            more
+                            More.
                         </p>
+
                         <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
                         <a href="#contact" className="cosmic-button">
                             {" "}
@@ -38,8 +41,8 @@ export const AboutSection = () => {
                                 </div>
                                 <div className="text-left">
                                     <h4 className="font-semibold text-lg"> Web Development</h4>
-                                    <p className="text-muted-foreground">
-                                        fill something
+                                    <p className="text-muted-foreground"> {/* finish */}
+                                        I have a couple hundred hours worth of React and ASP.NET development. 
                                     </p>
                                 </div>
                             </div>
