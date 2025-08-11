@@ -10,7 +10,7 @@ const projects = [
         image: "#",
         tags: ["Python", "WhsiperAI", "Machine Learning", "Clustering"],
         demoUrl: "#",
-        github: "#",
+        github: "https://github.com/Gus-McB/StudyRecordings",
     },
     {id:2,
         title: "Air Quality Prediction Tool",
@@ -19,7 +19,7 @@ const projects = [
         image: "#",
         tags: ["Python", "Scikit-learn", "Folium", "Machine Learning"],
         demoUrl: "#",
-        github: "#",
+        github: "https://github.com/Gus-McB/Air_Quality_Project",
     },
     {id:3,
         title: "Full Stack React SAPOL Webapp",
@@ -67,9 +67,10 @@ export const ProjectsSection = () => {
                                     <ExternalLink size={20} />
                                 </a> 
                                 : null}
-                                <a href={project.github} target="_blank" className="text-foreground/80 hover:text-primary transition-colors duration-300">
+                                {project.github !== "#" ? <a href={project.github} target="_blank" className="text-foreground/80 hover:text-primary transition-colors duration-300">
                                     <Github size={20} />
                                 </a>
+                                : null}
                             </div>
                         </div>
                     </div>
@@ -77,7 +78,7 @@ export const ProjectsSection = () => {
                 ))}
             </div>
         <div className="text-center mt-12">
-            <a className="cosmic-button w-fit flex items-center mx-auto gap-2" target="_blank" href="#">
+            <a className="cosmic-button w-fit flex items-center mx-auto gap-2" target="_blank" href="https://github.com/Gus-McB">
                 Check My Github <ArrowRight size={16} />
             </a>
         </div>

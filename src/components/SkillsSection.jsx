@@ -11,14 +11,16 @@ const skills = [
     {name: "Java", level: 70, category: "Backend"},
     {name: "C++", level: 80, category: "Backend"},
     {name: "Python", level: 90, category: "Backend"},
+    {name: "Node.js", level: 80, category: "Backend"},
+    {name: "Express.js", level: 75, category: "Backend"},
     {name: "TensorFlow", level: 60, category: "Backend"},
     {name: "Scikit-learn", level: 70, category: "Backend"},
     // tools
     {name: "Git", level: 95, category: "Tools"},
-    {name: "Weka", level: 80, category: "Tools"},
     {name: "GitHub", level: 90, category: "Tools"},
-    {name: "Vite", level: 80, category: "Tools"},
-    // Development Tools
+    {name: "Docker", level: 80, category: "Tools"},
+    {name: "Cursor", level: 80, category: "Tools"},
+    // Development Methodologies
     {name: "Agile", level: 75, category: "Development"},
     {name: "Scrum", level: 85, category: "Development"},
 ];

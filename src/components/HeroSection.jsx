@@ -21,10 +21,10 @@ export const HeroSection = () => {
                         </span>
                 </h1>
                 <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-                    I am a passionate Software Engineering student at the University of South Australia,
-                    specialising in Full Stack Development. I am focusing my independant studies in financial software,
-                    specifically, trading algorithms and applying machine learning techniques to improve algorithmic
-                    decision making.
+                    As Software Engineering student passionate about building smart, reliable systems that solve real-world problems. 
+                    My projects range from AI-powered automation to backend APIs, always with a focus on efficiency and user experience. 
+                    I'm also exploring algorithmic trading and quantitative finance, blending my coding expertise with data-driven 
+                    decision-making to create impactful solutions.
                 </p>
                 <div>
                     <a href="#projects" className="cosmic-button">

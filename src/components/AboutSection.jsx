@@ -20,7 +20,11 @@ export const AboutSection = () => {
                         </p>
 
                         <p className="text-muted-foreground">
-                            More.
+                            I'm currently a Software Engineering Intern at Arterial.ai, an AI-driven healthtech startup, 
+                            where I'm developing an SMS-based virtual assistant to support dental and medical receptionists. 
+                            Built with Node.js, this tool automates appointment reminders, booking confirmations, and patient 
+                            inquiries through natural-language SMS conversations. The goal is to reduce administrative workload, 
+                            improve response times, and enhance patient communication while maintaining a human-like interaction experience.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
@@ -40,9 +44,12 @@ export const AboutSection = () => {
                                     <Code className="h-6 w-6 text-primary" />
                                 </div>
                                 <div className="text-left">
-                                    <h4 className="font-semibold text-lg"> Web Development</h4>
-                                    <p className="text-muted-foreground"> {/* finish */}
-                                        I have a couple hundred hours worth of React and ASP.NET development. 
+                                    <h4 className="font-semibold text-lg"> AI and Automation</h4>
+                                    <p className="text-muted-foreground">
+                                        Developed AI tools like a transcription and diarization system that saved 300+ 
+                                        hours of manual work. Applied neural networks and clustering to classify air 
+                                        quality from environmental datasets. Passionate about turning repetitive tasks 
+                                        into efficient, automated solutions with measurable real-world impact.
                                     </p>
                                 </div>
                             </div>
@@ -53,9 +60,12 @@ export const AboutSection = () => {
                                         <User className="h-6 w-6 text-primary" />
                                     </div>
                                     <div className="text-left">
-                                        <h4 className="font-semibold text-lg"> Web Development</h4>
+                                        <h4 className="font-semibold text-lg"> Backend Development</h4>
                                         <p className="text-muted-foreground">
-                                            fill something
+                                            Experienced in building scalable backend systems with Flask, Node.js, PostgreSQL, 
+                                            and SQLite. At Arterial.ai, developing an SMS-based virtual assistant to automate 
+                                            patient communications. Skilled in RESTful APIs, database design, and integrating 
+                                            third-party services to create reliable, maintainable backend architectures.
                                         </p>
                                     </div>
                                 </div>
@@ -66,9 +76,12 @@ export const AboutSection = () => {
                                     <Briefcase className="h-6 w-6 text-primary" />
                                 </div>
                                 <div className="text-left">
-                                    <h4 className="font-semibold text-lg"> Web Development</h4>
+                                    <h4 className="font-semibold text-lg"> Data in Finance</h4>
                                     <p className="text-muted-foreground">
-                                        fill something
+                                        Proficient in Python, Pandas, and data visualisation tools like Folium and Matplotlib. 
+                                        Experienced in analysing large datasets and applying clustering models. Exploring algorithmic 
+                                        trading and quantitative finance to merge software engineering expertise with data-driven 
+                                        decision-making and analytical precision.
                                     </p>
                                 </div>
                             </div>
