@@ -1,8 +1,8 @@
 import { Mail, Phone, MapPin, Linkedin, Instagram, Facebook, Send, Space } from "lucide-react";
- import { cn } from "../lib/utils";
- import { useToast } from "../hooks/use-toast";
- import { useState } from "react";
- import emailjs from '@emailjs/browser';
+import { cn } from "../lib/utils";
+import { useToast } from "../hooks/use-toast";
+import { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 export const ContactSection = () => {
     const {toast} = useToast();
@@ -11,7 +11,12 @@ export const ContactSection = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setIsSubmitting(true);
-        emailjs.sendForm('service_7qbajy4', 'template_121f1ze', e.target, 'mniFEdmmcAUUVTMRG')
+        emailjs.sendForm(
+            import.meta.env.VITE_EMAILJS_SERVICE_ID, 
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID, 
+            e.target, 
+            import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        )
           .then(() => {
             toast({ title: "Message Sent", description: "Thank you for reaching out!" });
             setIsSubmitting(false);
@@ -89,17 +94,16 @@ export const ContactSection = () => {
                         </div>
                     </div>
                 </div>
-                <div className="bg-card p-8 rounded-lg shadow-xs"
-                onSubmit={handleSubmit}>
+                <div className="bg-card p-8 rounded-lg shadow-sm">
                     <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
-                    <form className="space-y-6">
+                    <form className="space-y-6" onSubmit={handleSubmit}>
                         <div>
                             <label htmlFor="name" className="block text-sm font-medium mb-2" > Your Name</label>
                             <input type="text" 
                             id="name" 
                             name="name"
                             required 
-                            className="text-black w-full px-4 py-3 rounded-md border border-input bg-primary-foreground focus:outline-hidden foucs:ring-2 focus:ring-primary" 
+                            className="text-black w-full px-4 py-3 rounded-md border border-input bg-primary-foreground focus:outline-none focus:ring-2 focus:ring-primary" 
                             placeholder="Jonathan..." />
                         </div>
                         <div>
@@ -108,7 +112,7 @@ export const ContactSection = () => {
                             id="email" 
                             name="email"
                             required 
-                            className="text-black w-full px-4 py-3 rounded-md border border-input bg-primary-foreground focus:outline-hidden foucs:ring-2 focus:ring-primary" 
+                            className="text-black w-full px-4 py-3 rounded-md border border-input bg-primary-foreground focus:outline-none focus:ring-2 focus:ring-primary" 
                             placeholder="jon@gmail.com" />
                         </div>
                         <div>

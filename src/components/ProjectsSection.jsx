@@ -1,38 +1,42 @@
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
+import soundwave from "../assets/soundwave.png";
+import airquality from "../assets/air_quality.png";
+import smsagent from "../assets/sms-agent.jpg";
 
 
 const projects = [
-    {id:1,
-        title: "Transcribing and Diarizing Tool",
-        description: "I developed a tool used to transcribe and diarize various types of audio files necessary for speech analysis." +
-        " The tool integrates OpenAIs Whisper model and my Kmeans clustering model to accurately transcribe vectorised audio segments." + 
-        " Tested accuracy reaches metrics of upto 80%.",
-        image: "#",
-        tags: ["Python", "WhsiperAI", "Machine Learning", "Clustering"],
-        demoUrl: "#",
-        github: "https://github.com/Gus-McB/StudyRecordings",
+    {
+      id: 1,
+      title: "Transcribing & Conversation Analysis Tool",
+      description:
+        "An advanced Python-based tool for transcribing and diarizing audio recordings with a streamlined GUI. Built on OpenAI's Whisper model and custom K-means clustering for speaker separation, the tool achieves transcription accuracy of ~80%. Beyond diarization, it generates detailed reports including most-used words, conversation intent, overlapping speech detection, and interactive visualizations to simplify analysis for researchers and professionals.",
+      image: soundwave,
+      tags: ["Python", "WhisperAI", "GUI", "NLP", "Data Visualization"],
+      demoUrl: "#",
+      github: "https://github.com/Gus-McB/StudyRecordings",
     },
-    {id:2,
-        title: "Air Quality Prediction Tool",
-        description: "This tool uses a Dense Regression Neural Network to accurately identify a locations Air Quality (AQI)." + 
-        " Performance exceeds 90% with the provided dataset. The tool then outputs a HTML page containing the plotted AQI for all locations.",
-        image: "#",
-        tags: ["Python", "Scikit-learn", "Folium", "Machine Learning"],
-        demoUrl: "#",
-        github: "https://github.com/Gus-McB/Air_Quality_Project",
+    {
+      id: 2,
+      title: "Air Quality Prediction Tool",
+      description:
+        "A machine learning pipeline that predicts a location’s Air Quality Index (AQI) using a Dense Regression Neural Network with >90% accuracy. Results are mapped onto an interactive HTML dashboard, combining predictive analytics with geospatial visualization for clear communication of air quality trends across regions.",
+      image: airquality,
+      tags: ["Python", "Scikit-learn", "Folium", "Machine Learning"],
+      demoUrl: "#",
+      github: "https://github.com/Gus-McB/Air_Quality_Project",
     },
-    {id:3,
-        title: "Full Stack React SAPOL Webapp",
-        description: "This web application mimicks the SAPOL website using previous historical and fabricated data for CRUD operations." +
-        "Razor endpoints were used to access a SQL database and manipulate data, an encruypted login system was built to ensure only authorised " +
-        "users can manipulate data.",
-        image: "#",
-        tags: ["React", "RazorPages", "REST API", "W3", "JavaScript"],
-        demoUrl: "#",
-        github: "#",
-    }
-
-]
+    {
+      id: 3,
+      title: "Automated SMS Agent for Dental Clinics",
+      description:
+        "A full-stack SMS automation system designed during my internship at Arterial AI. The agent handles appointment bookings, deposit payments, cancellations, and FAQs through conversational SMS. Built with a microservice architecture and integrated with Supabase/Postgres, Stripe, Cellcast, and deployed using AWS,it enables scalable communication pipelines and tracks conversation flows for clinic efficiency.",
+      image: smsagent,
+      tags: ["Node.js", "PostgreSQL", "Stripe", "Microservices", "AWS"],
+      demoUrl: "#",
+      github: "#",
+    },
+  ];
+  
 
 export const ProjectsSection = () => {
     return <section id="projects" className="py-24 px-4 relative">
@@ -47,7 +51,7 @@ export const ProjectsSection = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {projects.map((project, key) => (
-                    <div key={key} className="group bg-card p-6 rounded-lg overflow-hidden shadow-xs card-hover">
+                    <div key={key} className="group bg-card p-6 rounded-lg overflow-hidden shadow-sm card-hover">
                         <div className="h-48 overflow-hidden">
                             <img src={project.image} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                         </div>
@@ -59,7 +63,7 @@ export const ProjectsSection = () => {
                                     </span>
                                 ))}
                             </div>
-                        <h3 className="text-xl font-semibold nb-1"> {project.title}</h3>
+                        <h3 className="text-xl font-semibold mb-1"> {project.title}</h3>
                         <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
                         <div className="flex justify-between items-center">
                             <div className="flex space-x-4">
